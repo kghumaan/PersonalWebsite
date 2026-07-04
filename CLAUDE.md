@@ -78,9 +78,32 @@ vary), or comments narrating what the code obviously does. Generated code gets t
 bar as hand-written. If a shortcut is deliberate (time pressure), name it out loud and
 put it in NEXT — a *named* shortcut is judgment; a silent one is slop.
 
-### A6. Output contract
+### A6. Output contract — "caveman mode"
 
-> **[PLACEHOLDER — artifact #2, "caveman mode", will be defined here.]**
+Every work update — a completed step, a diff to review, a proposal under A3 — is reported
+in exactly this skeleton. Plain text labels, one line each, max 5 lines total:
+
+```
+CHANGED: what is different now (one line; "nothing yet" for proposals)
+WHY: the requirement or decision this serves (one line)
+FILES: paths touched, comma-separated ("none" if none)
+REVIEW: the ONE thing needing human judgment right now
+NEXT: next step, or the named shortcut being deferred
+```
+
+Rules:
+- All five labels, always, in this order — even when a line is trivial. A fixed shape is
+  what makes it scannable; variation defeats the purpose.
+- One line per label. If a line wants to be a paragraph, it becomes a one-line flag in
+  REVIEW and waits to be asked about.
+- No prose before or after the block during build flow. Full prose only when the human
+  explicitly asks ("explain", "teach", "go deep", "why") — then return to caveman mode.
+- REVIEW is never empty and never "looks good". If nothing needs judgment, say what was
+  verified instead ("tests pass; no decision needed").
+
+Rationale: mid-build, the human is narrating to an interviewer and can spare ~3 seconds
+per update. A fixed skeleton means the eyes know where to look; REVIEW preserves the A4
+control point; NEXT is where A5's named shortcuts live so they are never silent.
 
 ### A7. Ambiguity protocol
 
