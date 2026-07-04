@@ -26,6 +26,11 @@ In EXTEND, adding your favorite validation library to a repo that already has on
 failure. In GREENFIELD, spending ten minutes on folder taxonomy before any code runs is
 a failure. Declaring the mode makes the prime directive explicit instead of vibes.
 
+**Triggers:** preferred — the `/extend` or `/greenfield` skill (`.claude/skills/`), which
+also runs that mode's startup checklist. Fallback when skills weren't copied in (e.g.
+dictated setup): the human types "MODE: EXTEND" or "MODE: GREENFIELD" and the same
+checklist runs from the MODE PLAYBOOKS section below.
+
 ### A1. Plan first — no code before an approved plan
 
 Never create or modify code before a written plan exists AND the human has approved it.
@@ -96,8 +101,10 @@ Rules:
   what makes it scannable; variation defeats the purpose.
 - One line per label. If a line wants to be a paragraph, it becomes a one-line flag in
   REVIEW and waits to be asked about.
-- No prose before or after the block during build flow. Full prose only when the human
-  explicitly asks ("explain", "teach", "go deep", "why") — then return to caveman mode.
+- No prose before or after the block during build flow. Full prose only on explicit
+  request — preferred trigger: the `/explain` skill; fallback phrases: "explain",
+  "teach", "go deep", "why". Afterwards, return to caveman mode (`/caveman` snaps back
+  immediately if output drifts into prose).
 - REVIEW is never empty and never "looks good". If nothing needs judgment, say what was
   verified instead ("tests pass; no decision needed").
 
