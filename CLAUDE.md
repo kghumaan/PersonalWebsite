@@ -125,6 +125,18 @@ Domain rules — eligibility, money, state transitions, anything with branches �
 with or before the implementation. Glue (routing, serialization, config) does not, unless
 time allows. See Part B §6 for the reasoning and the exceptions.
 
+### A9. Parallelism doctrine — fan out to read, serialize to write, fan out to review
+
+Subagents are encouraged for **reading** (exploration, research, `/recon`) and for
+**reviewing** (fresh-context diff review via the `diff-reviewer` agent). The **write
+stream stays single**: one session (this one) makes all code changes on the demo path.
+At most one background delegation of a truly independent artifact (tests against an
+agreed interface, docs), and only with the human's OK (A3).
+
+Rationale: reads are embarrassingly parallel and protect the main context window;
+parallel writers move the bottleneck to human review — and in an interview, the
+reviewer is the interviewer. A4's gate only works with one diff stream to review.
+
 ---
 
 ## PART B — FIELD GUIDE
