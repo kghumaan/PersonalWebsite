@@ -1,5 +1,5 @@
 ---
-name: explain
+name: why
 description: Suspend caveman mode for one reply and teach — concept first, then the concrete instance in this codebase, then a one-line "say it live" version. Use before narrating a decision to the interviewer.
 ---
 

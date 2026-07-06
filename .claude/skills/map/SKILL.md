@@ -1,5 +1,5 @@
 ---
-name: recon
+name: map
 description: Kickoff read fan-out — launch parallel read-only scout agents on distinct angles, synthesize their reports into one map with conflicts surfaced. Use at minute ~2 of any session, both modes; pairs with PLAN.md.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: studyguide
+name: notes
 description: Generate STUDY.md — an evidence-based study guide of this codebase with file:line references, concept walkthrough, honest weaknesses, likely live extensions, and a self-quiz. Run before an interview that extends this repo; read-only.
 ---
 

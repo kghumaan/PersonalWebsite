@@ -1,5 +1,5 @@
 ---
-name: extend
+name: survey
 description: Start an interview session in EXTEND mode — read pass first, conform to existing conventions. Use at the start of any session on an existing codebase.
 ---
 

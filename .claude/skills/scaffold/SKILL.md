@@ -1,5 +1,5 @@
 ---
-name: greenfield
+name: scaffold
 description: Start an interview session in GREENFIELD mode — PLAN.md before code, walking skeleton, thin vertical slices. Use at the start of any session in an empty repo.
 ---
 

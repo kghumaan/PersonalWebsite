@@ -26,10 +26,10 @@ In EXTEND, adding your favorite validation library to a repo that already has on
 failure. In GREENFIELD, spending ten minutes on folder taxonomy before any code runs is
 a failure. Declaring the mode makes the prime directive explicit instead of vibes.
 
-**Triggers:** preferred — the `/extend` or `/greenfield` skill (`.claude/skills/`), which
-also runs that mode's startup checklist. Fallback when skills weren't copied in (e.g.
-dictated setup): the human types "MODE: EXTEND" or "MODE: GREENFIELD" and the same
-checklist runs from the MODE PLAYBOOKS section below.
+**Triggers:** preferred — the `/survey` (EXTEND) or `/scaffold` (GREENFIELD) skill
+(`.claude/skills/`), which also runs that mode's startup checklist. Fallback when skills
+weren't copied in (e.g. dictated setup): the human types "MODE: EXTEND" or "MODE:
+GREENFIELD" and the same checklist runs from the MODE PLAYBOOKS section below.
 
 ### A1. Plan first — no code before an approved plan
 
@@ -102,8 +102,8 @@ Rules:
 - One line per label. If a line wants to be a paragraph, it becomes a one-line flag in
   REVIEW and waits to be asked about.
 - No prose before or after the block during build flow. Full prose only on explicit
-  request — preferred trigger: the `/explain` skill; fallback phrases: "explain",
-  "teach", "go deep", "why". Afterwards, return to caveman mode (`/caveman` snaps back
+  request — preferred trigger: the `/why` skill; fallback phrases: "explain",
+  "teach", "go deep", "why". Afterwards, return to caveman mode (`/terse` snaps back
   immediately if output drifts into prose).
 - REVIEW is never empty and never "looks good". If nothing needs judgment, say what was
   verified instead ("tests pass; no decision needed").
@@ -127,7 +127,7 @@ time allows. See Part B §6 for the reasoning and the exceptions.
 
 ### A9. Parallelism doctrine — fan out to read, serialize to write, fan out to review
 
-Subagents are encouraged for **reading** (exploration, research, `/recon`) and for
+Subagents are encouraged for **reading** (exploration, research, `/map`) and for
 **reviewing** (fresh-context diff review via the `diff-reviewer` agent). The **write
 stream stays single**: one session (this one) makes all code changes on the demo path.
 At most one background delegation of a truly independent artifact (tests against an
